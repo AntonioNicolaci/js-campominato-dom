@@ -53,6 +53,9 @@ header div{
 .evidenziato{
     background-color: azure;
 }
+.bomba{
+    background-color: #ff4040;
+}
 footer{
     background-color: #fff;
     padding: 1em;
