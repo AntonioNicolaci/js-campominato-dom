@@ -16,9 +16,6 @@ header img{
     width: 100px;
     height: auto;
 }
-h1{
-    font-weight: 900;
-}
 header div{
     display: flex;
     align-items: center;
@@ -28,7 +25,10 @@ header div{
     padding-right: .5em;
 }
 #btn_diff_function button{
-    padding: 0 2em;
+    padding: .5em .7em;
+    background-color: #FFC107;
+    border: 0;
+    border-radius: .3em;
 }
 #div_tabella{
     align-self: center;
