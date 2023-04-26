@@ -1,10 +1,10 @@
 const divTabella = document.getElementById("div_tabella");
+let numBombe = [];
 
 function tabella(){
     let nCasella = 0;
     const altezzaLunghezza = document.getElementById("diff").value;
     let stampFinale = "";
-    let numBombe = [];
 
     for(let i = 0; 16 > i; i++){
         numBombe[i] = randomMaxMin(1, altezzaLunghezza*altezzaLunghezza);
@@ -20,7 +20,6 @@ function tabella(){
                     x++;
                 }
             }
-
             if (x != 0 || x != 1){
                 numBombe[i] = randomMaxMin(1, altezzaLunghezza*altezzaLunghezza);
                 numDiversi++;
@@ -45,6 +44,11 @@ function tabella(){
 }
 
 function casella(numeroCasella){
+    if (numBombe.includes(numeroCasella)) {
+        for (let i = 0; i < 16; i++) {
+            document.getElementById(`casella${numBombe[i]}`).className = "casella bomba";
+        }
+    }
     document.getElementById(`casella${numeroCasella}`).className += " evidenziato";
     console.log(numeroCasella);
 }
